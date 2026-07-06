@@ -4,6 +4,7 @@ import { AnimatePresence } from 'framer-motion'
 import Navbar from './components/Navbar'
 import SideMenu from './components/SideMenu'
 import AnimatedBackground from './components/AnimatedBackground'
+import ChatWidget from './components/ChatWidget'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import Register from './pages/Register'
@@ -16,6 +17,7 @@ import Cart from './pages/Cart'
 import Support from './pages/Support'
 import AdminProducts from './pages/AdminProducts'
 import AdminProductForm from './pages/AdminProductForm'
+import AdminChats from './pages/AdminChats'
 import './styles/App.css'
 
 function App() {
@@ -43,10 +45,13 @@ function App() {
             <Route path="/admin/productos" element={<AdminProducts />} />
             <Route path="/admin/productos/nuevo" element={<AdminProductForm />} />
             <Route path="/admin/productos/:id" element={<AdminProductForm />} />
+            <Route path="/admin/chats" element={<AdminChats />} />
             <Route path="*" element={<Home />} />
           </Routes>
         </AnimatePresence>
       </main>
+
+      <ChatWidget />
     </div>
   )
 }

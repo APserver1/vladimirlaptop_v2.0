@@ -5,7 +5,7 @@ import { useAuth } from '../contexts/AuthContext'
 import {
   HomeIcon, CatalogIcon, ComputerIcon, LaptopIcon, PeripheralsIcon,
   CameraIcon, WebIcon, SoftwareIcon, PhotoIcon, CartIcon, SupportIcon,
-  TermsIcon, SettingsIcon, ProductIcon, CloseIcon, LogoutIcon,
+  TermsIcon, SettingsIcon, ProductIcon, ChatIcon, CloseIcon, LogoutIcon,
 } from './Icons'
 import { CATEGORIES } from '../lib/categories'
 import '../styles/SideMenu.css'
@@ -125,10 +125,24 @@ const SideMenu = ({ open, onClose }) => {
                   >
                     <Link
                       to="/admin/productos"
-                      className={`sidemenu-item admin ${location.pathname.startsWith('/admin') ? 'active' : ''}`}
+                      className={`sidemenu-item admin ${location.pathname.startsWith('/admin/productos') ? 'active' : ''}`}
                     >
                       <span className="sidemenu-icon"><ProductIcon /></span>
                       <span className="sidemenu-label">Productos</span>
+                      <span className="sidemenu-badge">Admin</span>
+                    </Link>
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.05 + (menuStructure.length + 1) * 0.03 }}
+                  >
+                    <Link
+                      to="/admin/chats"
+                      className={`sidemenu-item admin ${location.pathname.startsWith('/admin/chats') ? 'active' : ''}`}
+                    >
+                      <span className="sidemenu-icon"><ChatIcon /></span>
+                      <span className="sidemenu-label">Chats</span>
                       <span className="sidemenu-badge">Admin</span>
                     </Link>
                   </motion.div>
