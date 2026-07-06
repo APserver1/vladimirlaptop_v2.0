@@ -141,13 +141,19 @@ export const ChatProvider = ({ children }) => {
     return await sendMessage(content, attachments)
   }
 
-  return {
-    conversation,
-    messages,
-    loading,
-    sendMessage,
-    sendMessageWithFiles,
-    uploadAttachment,
-    isAdmin,
-  }
+  return (
+    <ChatContext.Provider
+      value={{
+        conversation,
+        messages,
+        loading,
+        sendMessage,
+        sendMessageWithFiles,
+        uploadAttachment,
+        isAdmin,
+      }}
+    >
+      {children}
+    </ChatContext.Provider>
+  )
 }
