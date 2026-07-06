@@ -73,6 +73,7 @@ export const AuthProvider = ({ children }) => {
       password,
       options: {
         data: { full_name: fullName },
+        emailRedirectTo: `${window.location.origin}/login`,
       },
     })
     if (!error && data?.user) {
