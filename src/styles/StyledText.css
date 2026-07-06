@@ -1,0 +1,46 @@
+/* Styles for inline formatted text in product descriptions */
+.styled-c {
+  color: var(--purple-200);
+  font-weight: 600;
+}
+
+.styled-g {
+  font-size: 1.15em;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.styled-p {
+  font-size: 0.85em;
+  color: var(--text-muted);
+}
+
+.styled-u {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.styled-w {
+  text-transform: lowercase;
+  font-family: monospace;
+}
+
+.styled-k {
+  font-family: 'Fira Code', 'Courier New', monospace;
+  background: rgba(139, 92, 246, 0.12);
+  border: 1px solid var(--glass-border);
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-size: 0.9em;
+  color: var(--purple-200);
+}
+
+.styled-b {
+  background: var(--grad-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+}

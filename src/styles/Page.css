@@ -1,0 +1,59 @@
+.page {
+  padding: 40px 0 80px;
+  min-height: calc(100vh - 72px);
+  position: relative;
+}
+
+.page-hero {
+  text-align: center;
+  margin-bottom: 48px;
+  padding: 20px 0;
+}
+
+.page-hero h1 {
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  margin-bottom: 12px;
+}
+
+.page-hero p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
+.page-card {
+  padding: 48px 44px;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.page-intro {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 36px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.terms-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.term-section h2 {
+  font-size: 1.15rem;
+  color: var(--purple-200);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.term-section p {
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .page { padding: 20px 0 60px; }
+  .page-card { padding: 32px 24px; }
+}

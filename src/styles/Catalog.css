@@ -1,0 +1,221 @@
+.catalog-controls {
+  padding: 20px;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.catalog-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: rgba(10, 6, 18, 0.4);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: 0 16px;
+  transition: all var(--transition);
+}
+
+.catalog-search:focus-within {
+  border-color: var(--purple-400);
+  background: rgba(10, 6, 18, 0.6);
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15);
+}
+
+.catalog-search > span {
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+.catalog-search input {
+  flex: 1;
+  padding: 14px 0;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.catalog-search input::placeholder {
+  color: var(--text-muted);
+}
+
+.catalog-categories {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.catalog-cat {
+  padding: 9px 18px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 999px;
+  color: var(--text-primary);
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: all var(--transition);
+}
+
+.catalog-cat:hover {
+  background: var(--glass-border);
+  transform: translateY(-2px);
+}
+
+.catalog-cat.active {
+  background: var(--grad-primary);
+  border-color: transparent;
+  box-shadow: 0 4px 16px rgba(139, 92, 246, 0.4);
+  color: var(--white);
+}
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.categories-strip {
+  padding: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.cat-pill {
+  padding: 9px 18px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 999px;
+  color: var(--text-primary);
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all var(--transition);
+}
+
+.cat-pill:hover {
+  background: var(--glass-border);
+  border-color: var(--purple-300);
+  transform: translateY(-2px);
+  color: var(--white);
+}
+
+.cat-pill.active {
+  background: var(--grad-primary);
+  border-color: transparent;
+  color: var(--white);
+  box-shadow: 0 4px 16px rgba(139, 92, 246, 0.4);
+}
+
+.catalog-item {
+  padding: 0;
+  overflow: hidden;
+  transition: all var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog-item:hover {
+  border-color: var(--glass-border-strong);
+  box-shadow: var(--shadow-glow-strong);
+}
+
+.catalog-item-img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: rgba(10, 6, 18, 0.5);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.catalog-item-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.catalog-item:hover .catalog-item-img img {
+  transform: scale(1.08);
+}
+
+.catalog-item-body {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.catalog-cat-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 999px;
+  font-size: 0.72rem;
+  color: var(--purple-200);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  align-self: flex-start;
+}
+
+.catalog-item-body h3 {
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.catalog-item-body p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  flex: 1;
+  color: var(--text-secondary);
+}
+
+.catalog-item-price {
+  margin-top: 8px;
+  padding-top: 14px;
+  border-top: 1px solid var(--glass-border);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.catalog-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 60px 20px;
+  color: var(--text-muted);
+}
+
+.catalog-empty {
+  text-align: center;
+  padding: 60px 30px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.catalog-empty-icon {
+  font-size: 4rem;
+  margin-bottom: 16px;
+  filter: drop-shadow(0 0 20px rgba(139, 92, 246, 0.4));
+}
+
+.catalog-empty h3 {
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+}
+
+.catalog-empty p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+@media (max-width: 640px) {
+  .catalog-controls { padding: 14px; }
+  .catalog-grid { grid-template-columns: 1fr; }
+}
